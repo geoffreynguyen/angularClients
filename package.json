@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/geoffreynguyen/angularClients/issues"
   },
-  "homepage": "https://github.com/geoffreynguyen/angularClients#readme"
+  "homepage": "https://github.com/geoffreynguyen/angularClients#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1"
+  }
 }
