@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/geoffreynguyen/angularClients#readme",
   "dependencies": {
-    "body-parser": "^1.17.1"
+    "body-parser": "^1.17.1",
+    "mongodb": "^2.2.25"
   }
 }
