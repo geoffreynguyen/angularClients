@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <th>Nom</th>
+    <th>Prénom</th>
+  </tr>
+  <tr ng-repeat="client in clients | orderBy:client.nom" value="{{client._id}}">
+    <td>{{client.nom}}</td>
+    <td>{{client.prenom}}</td>
+  </tr>
+</ul>

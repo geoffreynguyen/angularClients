@@ -12,7 +12,6 @@ app.use(bodyParser.json());
 // support encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -101,7 +100,6 @@ app.put('/client/:id',function(req,res){
 
   });
 })
-
 
 app.listen(8888,function(){
   console.log("listening on port 8888");

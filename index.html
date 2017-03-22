@@ -8,10 +8,11 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <title>Angular Clients</title>
+        <link rel="stylesheet" type="text/css" href="dist/style.css"/>
         <script src="app.js"></script>
         <script src="services/mainService.js"></script>
         <script src="controllers/mainController.js"></script>
-        <!-- <script src="directives/mainClient.js"></script> -->
+        <script src="directives/mainClient.js"></script>
     </head>
     <body>
         <section  class="container" ng-controller="clientCtrl">
@@ -34,10 +35,7 @@
                 </form>
                 <h2>Liste des Clients</h2>
                 <article>
-                  <ul>
-                    <li ng-repeat="client in clients" value="{{client._id}}">{{client.nom}} - {{client.prenom}} </li>
-                  </ul>
-                    <!-- <client /> -->
+                    <client-directive />
                 </article>
         </section>
     </body>
