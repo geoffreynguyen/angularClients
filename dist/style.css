@@ -11,3 +11,15 @@ table tr:nth-child(odd) {
 table tr:nth-child(even) {
   background-color: #ffffff;
 }
+
+.title-client {
+  text-align: center;
+}
+
+form {
+  margin-top: 62px;
+}
+
+.row-button {
+  margin-left: 10%;
+}

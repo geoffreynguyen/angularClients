@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT ,DELETE');
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
@@ -33,8 +34,8 @@ app.get('/clients',function(req,res){
   });
 })
 
-app.get('/clients/:id',function(req,res){
-  console.log("receive port 8888 /clients/"+req.params.id);
+app.get('/client/:id',function(req,res){
+  console.log("receive port 8888 /client/"+req.params.id);
   MongoClient.connect(dbName, function(error, db) {
       if (error) throw error;
       var o_id = new ObjectID(req.params.id);

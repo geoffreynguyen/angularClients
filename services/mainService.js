@@ -3,16 +3,19 @@ app.factory('clientFactory', function($http){
     getAllClient: function() {
       return $http.get('http://localhost:8888/clients');
     },
+
     getClient: function(id) {
       return $http.get('http://localhost:8888/client/'+id);
     },
+
     addClient: function(client){
-      return $http.post('http://localhost:8888/client/',client);
+      return $http.post('http://localhost:8888/clients/',client);
     },
     deleteClient: function(id){
       return $http.delete('http://localhost:8888/client/'+id);
     },
     modifyClient : function(id, clientUpdate){
+      console.log(id + " " + clientUpdate.nom);
       return $http.put('http://localhost:8888/client/'+id,clientUpdate);
     }
 
