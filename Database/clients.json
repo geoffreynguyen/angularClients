@@ -1,0 +1,7 @@
+{ "_id" : { "$oid" : "58d11f57264ee348cd498ab7" }, "nom" : "Test", "prenom" : "testA" }
+{ "_id" : { "$oid" : "58d123736bebff49102d8afd" }, "nom" : "Florian", "prenom" : "Mauvais" }
+{ "_id" : { "$oid" : "58d1237965d685491b4dc9d5" }, "nom" : "GLaDOS", "prenom" : "Portal" }
+{ "_id" : { "$oid" : "58d128235a14af4e244aaf0c" }, "nom" : "Harry", "prenom" : "Potter" }
+{ "_id" : { "$oid" : "58d128c81261644e7f723550" }, "nom" : "Ron", "prenom" : "Weisley" }
+{ "_id" : { "$oid" : "58d128c81261644e7f723551" }, "nom" : "Hermione", "prenom" : "Granger" }
+{ "_id" : { "$oid" : "58d251f7cc713e929cc0f061" }, "nom" : "Skywalker", "prenom" : "Anakin" }
