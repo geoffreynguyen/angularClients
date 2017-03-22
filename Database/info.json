@@ -1,0 +1,5 @@
+{ "_id" : { "$oid" : "58d25286cc713e929cc0f062" }, "client_id" : { "$oid" : "58d123736bebff49102d8afd" }, "created" : "20/03/2016", "last_call" : "20/07/2016:17.45", "last_problem" : "Problem with the boss" }
+{ "_id" : { "$oid" : "58d252a4cc713e929cc0f063" }, "client_id" : { "$oid" : "58d1237965d685491b4dc9d5" }, "created" : "20/06/2016", "last_call" : "20/07/2016:17.45", "last_problem" : "Problem with internet" }
+{ "_id" : { "$oid" : "58d252c7cc713e929cc0f064" }, "client_id" : { "$oid" : "58d128235a14af4e244aaf0c" }, "created" : "20/01/2016", "last_call" : "20/07/2016:17.45", "last_problem" : "Problem with internet" }
+{ "_id" : { "$oid" : "58d252f1cc713e929cc0f065" }, "client_id" : { "$oid" : "58d128c81261644e7f723550" }, "created" : "20/01/2017", "last_call" : "20/02/2017:17.45", "last_problem" : "Problem with the dog" }
+{ "_id" : { "$oid" : "58d25321cc713e929cc0f066" }, "client_id" : { "$oid" : "58d128c81261644e7f723551" }, "created" : "20/02/2017", "last_call" : "20/03/2017:17.45", "last_problem" : "Problem with the cat" }
