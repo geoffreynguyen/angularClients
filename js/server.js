@@ -110,14 +110,13 @@ app.get('/folders/',function(req,res){
 })
 
 
-app.get('/folder/:id',function(req,res){
-  console.log("receive port 8888 /clients/"+req.params.id);
+app.get('/folder/:id_user',function(req,res){
+  console.log("receive port 8888 /clients/"+req.params.id_user);
   MongoClient.connect(dbName, function(error, db) {
       if (error) throw error;
-      var o_id = new ObjectID(req.params.id);
+      var o_id = new ObjectID(req.params.id_user);
 
-      // console.log("ObjectId(\""+req.params.id+"\")");
-      db.collection(folderTable).find({"_id":o_id}).toArray(function (error, results) {
+      db.collection(folderTable).find({"client_id":o_id}).toArray(function (error, results) {
         if (error) throw error;
         res.json(results);
       });
