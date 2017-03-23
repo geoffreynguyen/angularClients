@@ -109,8 +109,23 @@ app.get('/folders/',function(req,res){
   });
 })
 
+app.get('/folder/:id/',function(req,res){
+  console.log("receive port 8888 /clients/"+req.params.id);
+  MongoClient.connect(dbName, function(error, db) {
+      if (error) throw error;
+      var o_id = new ObjectID(req.params.id);
 
-app.get('/folder/:id_user',function(req,res){
+      db.collection(folderTable).find({"_id":o_id}).toArray(function (error, results) {
+        if (error) throw error;
+        res.json(results);
+      });
+      db.close();
+    })
+});
+
+
+
+app.get('/client/:id_user/folder/',function(req,res){
   console.log("receive port 8888 /clients/"+req.params.id_user);
   MongoClient.connect(dbName, function(error, db) {
       if (error) throw error;
@@ -126,13 +141,16 @@ app.get('/folder/:id_user',function(req,res){
 
 
 app.post('/folders/', function(req, res) {
-    var name = req.body.nom;
-    var surname = req.body.prenom;
-
     MongoClient.connect(dbName, function(error, db) {
+        // Create id client to link the folder
+        var o_id = new ObjectID(req.body["client_id"]);
+        // Change the receive client_id
+        var toSend = req.body;
+        toSend["client_id"] = o_id;
+        console.log(toSend);
         if (error) throw error;
-
-        db.collection(folderTable).insert(req.body, function (error, results) {
+        console.log('before add');
+        db.collection(folderTable).insert(toSend, function (error, results) {
           if (error) throw error;
           // use insertedCount to know how many is insert
           res.json(results);
@@ -163,7 +181,7 @@ app.put('/folder/:id',function(req,res){
 
       console.log("Before update");
       // use n to know it was delete
-      db.collection(folderTable).update({"_id":o_id},{$set:{"nom":req.body.nom,"prenom":req.body.prenom}});
+      db.collection(folderTable).update({"_id":o_id},{$set:{"created":req.body.created, "last_call":req.body.last_call, "last_problem":req.body.last_problem}});
       console.log("After update");
       res.send("ok");
 

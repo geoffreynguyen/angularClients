@@ -3,7 +3,10 @@ app.factory('folderFactory', function($http){
     getAllFolder: function() {
       return $http.get('http://localhost:8888/folders');
     },
-    getFolder: function(id) {
+    getFolderByClientId: function(id) {
+      return $http.get('http://localhost:8888/client/'+id+'/folder/');
+    },
+    getFolder: function(id){
       return $http.get('http://localhost:8888/folder/'+id);
     },
     addFolder: function(folder){

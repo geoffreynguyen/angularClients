@@ -1,0 +1,21 @@
+<div ng-if="infosFolder != ''" class="col-lg-12">
+  <h2 class="title-client">Informations du client</h2>
+  <table class="col-lg-12">
+    <tr>
+      <th>Date de création</th>
+      <th>Dernier appel</th>
+      <th>Problème</th>
+      <th></th>
+    </tr>
+    <tr ng-repeat="info in infosFolder">
+
+      <td>{{info.created}}</td>
+      <td>{{info.last_call}}</td>
+      <td>{{info.last_problem}}</td>
+      <td>
+        <input type="button" ng-click="getFolderById(info._id, true)" value="Editer">
+        <input type="button" ng-click="deleteFolder(info._id)" value="Supprimer">
+      </td>
+    </tr>
+  </table>
+</div>

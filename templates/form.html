@@ -1,7 +1,7 @@
 <div ng-switch="edit">
 
   <div ng-switch-when="true" ng-if="clientDetail != ''">
-    <form name="newClientUpdateForm" ng-submit="updateClientById()" class="well form-inline pull-right col-lg-6">
+    <form name="newClientUpdateForm" ng-submit="updateClientById()" class="well form-inline pull-right col-lg-12">
         <legend>Modification d'un client</legend>
         <input type="hidden" ng-model="clientDetail._id" ng-value="clientDetail._id"/>
         <fieldset class="row">
@@ -21,7 +21,7 @@
   </div>
 
   <div ng-switch-default>
-    <form name="newClientForm" ng-submit="addClient()" class="well form-inline pull-right col-lg-6">
+    <form name="newClientForm" ng-submit="addClient()" class="well form-inline pull-right col-lg-12">
         <legend>Ajout d'un client</legend>
         <fieldset class="row">
             <label for="nom" class="col-lg-3">Nom :</label>

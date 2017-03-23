@@ -1,5 +1,5 @@
 <div ng-if="clientDetail != ''" class="col-lg-12">
-  <h2 class="title-client">Détail drgdu client</h2>
+  <h2 class="title-client">Détail du client</h2>
   <table class="col-lg-12">
     <tr>
       <th>Nom</th>
@@ -12,6 +12,7 @@
       <td>
         <input type="button" ng-click="getClientById(clientDetail._id, true)" value="Editer">
         <input type="button" ng-click="deleteClient(clientDetail._id)" value="Supprimer">
+        <input type="button" ng-click="addInfosBool(true)" value="Ajouter informations">
       </td>
     </tr>
   </table>

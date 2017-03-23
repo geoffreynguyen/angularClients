@@ -1,0 +1,74 @@
+<div ng-switch="editFolder">
+
+  <div ng-switch-when="true">
+    <div ng-if="infos != ''">
+      <form name="infosUpdateForm" ng-submit="updateInfosById()" class="well form-inline pull-right col-lg-12">
+          <legend>Modifier les informations</legend>
+          <input type="hidden" ng-model="infos._id" ng-value="infos._id"/>
+          <fieldset class="row">
+              <label for="created" class="col-lg-3">Créer le :</label>
+              <input id="created" type="text" style="width:150px" class="input-sm form-control " ng-model="infos.created" ng-value="infos.created">
+          </fieldset>
+          <h1></h1>
+          <fieldset class="row">
+              <label for="last_call" class="col-lg-3">Dernier appel :</label>
+              <input id="last_call" type="text" style="width:150px" class="input-sm form-control" ng-model="infos.last_call" ng-value="infos.last_call">
+          </fieldset>
+          <fieldset class="row">
+              <label for="problem" class="col-lg-3">Problème :</label>
+              <input id="problem" type="text" style="width:150px" class="input-sm form-control" ng-model="infos.last_problem" ng-value="infos.last_problem">
+          </fieldset>
+          <h1></h1>
+          <fieldset class="row row-button">
+              <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign"></span> Modifier </button>
+          </fieldset>
+      </form>
+    </div>
+    <div ng-if="infos == ''">
+      <form name="newInfosForm" ng-submit="addInfos()" class="well form-inline pull-right col-lg-12">
+          <legend>Ajouter des informations</legend>
+          <fieldset class="row">
+              <label for="nom" class="col-lg-3">Créer le :</label>
+              <input id="nom" type="text" style="width:150px" class="input-sm form-control " ng-model="newInfos.created">
+          </fieldset>
+          <h1></h1>
+          <fieldset class="row">
+              <label for="last_call" class="col-lg-3">Dernier appel :</label>
+              <input id="last_call" type="text" style="width:150px" class="input-sm form-control" ng-model="newInfos.last_call">
+          </fieldset>
+          <fieldset class="row">
+              <label for="last_problem" class="col-lg-3">Dernier problème :</label>
+              <input id="last_problem" type="text" style="width:150px" class="input-sm form-control" ng-model="newInfos.last_problem">
+          </fieldset>
+          <h1></h1>
+          <fieldset class="row row-button">
+              <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign"></span> Ajouter </button>
+              <button class="btn btn-primary" type="reset"><span class="glyphicon glyphicon-remove-sign"></span> Effacer </button>
+          </fieldset>
+      </form>
+    </div>
+  </div>
+  <div ng-switch-default ng-if="clientDetail != ''">
+    <form name="newInfosForm" ng-submit="addInfos()" class="well form-inline pull-right col-lg-12">
+        <legend>Ajouter des informations</legend>
+        <fieldset class="row">
+            <label for="nom" class="col-lg-3">Créer le :</label>
+            <input id="nom" type="text" style="width:150px" class="input-sm form-control " ng-model="newInfos.created">
+        </fieldset>
+        <h1></h1>
+        <fieldset class="row">
+            <label for="last_call" class="col-lg-3">Dernier appel :</label>
+            <input id="last_call" type="text" style="width:150px" class="input-sm form-control" ng-model="newInfos.last_call">
+        </fieldset>
+        <fieldset class="row">
+            <label for="last_problem" class="col-lg-3">Dernier problème :</label>
+            <input id="last_problem" type="text" style="width:150px" class="input-sm form-control" ng-model="newInfos.last_problem">
+        </fieldset>
+        <h1></h1>
+        <fieldset class="row row-button">
+            <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-ok-sign"></span> Ajouter </button>
+            <button class="btn btn-primary" type="reset"><span class="glyphicon glyphicon-remove-sign"></span> Effacer </button>
+        </fieldset>
+    </form>
+  </div>
+</div>

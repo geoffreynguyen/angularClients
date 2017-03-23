@@ -21,3 +21,19 @@ app.directive("clientFormDirective", function ()
         templateUrl: 'templates/form.html'
     }
 });
+
+app.directive("clientInfosFormDirective", function ()
+{
+    return{
+        restrict: 'E',
+        templateUrl: 'templates/formInfos.html'
+    }
+});
+
+app.directive("clientInfosDirective", function ()
+{
+    return{
+        restrict: 'E',
+        templateUrl: 'templates/detailInfos.html'
+    }
+});
