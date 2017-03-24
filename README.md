@@ -10,10 +10,10 @@ It was did for a school project.
 * `npm install mongodb --global`
 
 ## Run
-### Server (/server)
-`python -m SimpleHTTPServerr`
-### Web client (/client)
-`nodemon client.js`
+### Server (/)
+`nodemon js/server.js`
+### Web client (/)
+`python -m SimpleHTTPServer`
 
 ## Collaborators
 * Srouji Michel
