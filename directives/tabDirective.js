@@ -8,12 +8,13 @@ app.directive("tabDirective", function ()
           headToFilter: '=filter',
           buttons: '=buttons'
         },
-        controller:function($scope){
-          $scope.getButton = function(button){
-            console.log(button);
-            return $scope.trustAsHtml(button);
-          };
-        },
+        // transclude = true,
+        // controller:function($scope,$sce){
+        //   $scope.getButton = function(button){
+        //     var htmlButton = '<input type="'+button["type"]+'" ng-click="'+button["ng-click"]+'" value="'+button["value"]+'">';
+        //     return $sce.trustAsHtml(htmlButton);
+        //   };
+        // },
         templateUrl: 'templates/tabCustom.html'
 
     }

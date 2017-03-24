@@ -4,7 +4,15 @@ app.controller('clientCtrl', function($scope, clientFactory, folderFactory){
     $scope.loading = true;
     $scope.clients = [];
     $scope.clientsHeaders = ["nom","prenom"];
-    $scope.clientsButton = ['<input type="button" ng-click="getClientById(client._id)" value="Voir">']
+    $scope.clientsButton = [{
+      "type":"button",
+      "ng-click":"getClientById(client._id)",
+      "value":"Voir",
+      "method":function(id){
+        console.log(id);
+        return $scope.getClientById(id);
+      }
+    }];
     $scope.filtHeader = "nom";
     $scope.edit = false;
     $scope.editFolder = false;
@@ -24,6 +32,10 @@ app.controller('clientCtrl', function($scope, clientFactory, folderFactory){
     });
 
   };
+
+  $scope.test = function(){
+    console.log("ok");
+  }
 
   $scope.getClientById = function(id, edit=false){
     $scope.infosFolder = [];
